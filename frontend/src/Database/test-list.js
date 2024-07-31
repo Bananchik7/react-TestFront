@@ -1,4 +1,4 @@
-const list = [
+export const list = [
   {
     name: "1 неделя",
     price: 699,
