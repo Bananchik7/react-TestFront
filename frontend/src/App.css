@@ -40,3 +40,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "RubikBold";
+    src: url("./fonts/RubikBold/RubikBold.eot");
+    src: url("./fonts/RubikBold/RubikBold.eot?#iefix")
+        format("embedded-opentype"),
+      url("./fonts/RubikBold/RubikBold.woff") format("woff"),
+      url("./fonts/RubikBold/RubikBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+  }
+}
+@font-face {
+  font-family: "BebasNeueThin";
+  src: url("./fonts/BebasNeue/BebasNeue_Bold.otf");
+  src: url("./fonts/BebasNeue/BebasNeue_Bold.otf?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/BebasNeue/BebasNeue_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "BebasNeueC";
+  src: url("./fonts/BebasNeue/BebasNeue_Regular.otf");
+  src: url("./fonts/BebasNeue/BebasNeue_Regular.otf?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/BebasNeue/BebasNeue_Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "PTRootUI";
+  src: url("./fonts/PTRootUI/PTRootUILight.eot");
+  src: url("./fonts/PTRootUI/PTRootUILight.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/PTRootUI/PTRootUILight.woff") format("woff"),
+    url("./fonts/PTRootUI/PTRootUILight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "PTRootUIBold";
+  src: url("./fonts/PTRootUI/PTRootUIBold.eot");
+  src: url("./fonts/PTRootUI/PTRootUIBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/PTRootUI/PTRootUIBold.woff") format("woff"),
+    url("./fonts/PTRootUI/PTRootUIBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}

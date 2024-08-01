@@ -1,19 +1,33 @@
-import Price from "../Price/Price.jsx";
+import Price from "./Price.jsx";
+import Agreement from "./Agreement.jsx";
+import ButtonSale from "./ButtonSale.jsx";
 
 export default function Main() {
   return (
     <main className="bg-[#F5F7F7] h-[1115px] pt-[1.5%]">
-      <p className="font-extrabold text-[175%] text-[#2D3242] ml-[25%] tracking-wider">
+      <p className="text-[175%] text-[#2D3242] ml-[25%] tracking-wider font-title">
         ВЫБЕРИТЕ ПОДХОДЯЩИЙ ТАРИФНЫЙ ПЛАН
       </p>
       <div className="flex">
-        <aside className="w-[50%]">
-          <div className="w-[65%] ml-[22%] mt-[13%]">
+        <aside className="w-[45%]">
+          <div className="w-[75%] ml-[25%] mt-[13%]">
             <img className="w-[100%] h-[100%]" src="./img.png" alt="img"></img>
           </div>
         </aside>
-        <article>
+        <article className="w-[45%]">
           <Price />
+          <p className="m-[0.5%] mt-[3%] text-[125%] font-all font-bold ">
+            Следуя плану на 3 месяца, люди получают в 2 раза лучший результат,
+            чем за 1 месяц
+          </p>
+          <Agreement />
+          <ButtonSale />
+          <p className="font-all">
+            Нажимая «Купить», Пользователь соглашается на автоматическое
+            списание денежных средств по истечению купленного периода.
+            Дальнейшие списания по тарифам участвующим в акции осуществляются по
+            полной стоимости согласно оферте.
+          </p>
         </article>
       </div>
     </main>
