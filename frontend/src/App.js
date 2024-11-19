@@ -6,7 +6,7 @@ import Popup from "./Components/Popup/Popup";
 function App() {
   return (
     <>
-      <Popup />
+      {/*<Popup />*/}
       <Header />
       <Main />
     </>

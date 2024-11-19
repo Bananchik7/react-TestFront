@@ -4,17 +4,17 @@ import ButtonSale from "./ButtonSale.jsx";
 
 export default function Main() {
   return (
-    <main className="bg-[#F5F7F7] h-[1115px] pt-[1.5%]">
+    <main className="z-0 bg-[#F5F7F7] pb-[3%] pt-[1.5%] ">
       <p className="text-[175%] text-[#2D3242] ml-[25%] tracking-wider font-title">
         ВЫБЕРИТЕ ПОДХОДЯЩИЙ ТАРИФНЫЙ ПЛАН
       </p>
       <div className="flex">
         <aside className="w-[45%]">
-          <div className="w-[75%] ml-[25%] mt-[13%]">
+          <div className="w-[65%] ml-[25%] mt-[10%]">
             <img className="w-[100%] h-[100%]" src="./img.png" alt="img"></img>
           </div>
         </aside>
-        <article className="w-[45%]">
+        <article className="w-[40%] ml-[3%]">
           <Price />
           <p className="m-[0.5%] mt-[3%] text-[125%] font-all font-bold ">
             Следуя плану на 3 месяца, люди получают в 2 раза лучший результат,
