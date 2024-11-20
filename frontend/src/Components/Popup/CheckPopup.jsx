@@ -1,19 +1,25 @@
 export default function CheckPopup({ name, price, old, sale }) {
   return (
-    <div className=" bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mr-[2%] mt-[2%] p-[3%] ">
+    <button className=" w-[40%] bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mr-[2%] mt-[2%] p-[3%] pb-[1%] hover:bg-[#01B9C5]/10  hover:border-[#01B9C5] cursor-pointer">
       <div className="flex">
-        <p className="text-[#2D3242] text-[190%] font-name font-bold">{name}</p>
-        <input className="w-[10%] ml-[40%] mt-[-6%]" type="radio"></input>
+        <p className="text-[#2D3242] text-[170%] font-name font-bold">{name}</p>
+        <input
+          className="w-[12%] ml-[42%] mt-[-7%] accent-[#37E3EE] cursor-pointer"
+          type="radio"
+        ></input>
       </div>
-      <div className="w-[35%]">
+      <div className="w-[30%]">
         <img src={old} alt="" className="w-[100%]" />
       </div>
-      <div className="flex mt-[15%]">
-        <p className="text-[340%] font-price font-black">{price + "₽"}</p>
-        <div className="w-[45%] ml-[1%] mt-[-2%]">
+      <hr className="w-[85%] mt-[10%] ml-[5%]"></hr>
+      <div className="flex mt-[13%] ml-[2%]">
+        <p className="w-[50%] text-[280%] font-price font-black">
+          {price + "₽"}
+        </p>
+        <div className="ml-[8%] mt-[-2%]">
           <img src={sale} alt="" className="w-[100%]" />
         </div>
       </div>
-    </div>
+    </button>
   );
 }

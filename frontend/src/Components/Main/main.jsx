@@ -4,11 +4,11 @@ import ButtonSale from "./ButtonSale.jsx";
 
 export default function Main() {
   return (
-    <main className="z-0 bg-[#F5F7F7] pb-[3%] pt-[1.5%] ">
-      <p className="text-[175%] text-[#2D3242] ml-[25%] tracking-wider font-title">
+    <main className="z-0 bg-[#F5F7F7] pb-[6%] pt-[1.5%] ">
+      <p className="text-[220%] text-[#2D3242] ml-[20%] tracking-wider font-title">
         ВЫБЕРИТЕ ПОДХОДЯЩИЙ ТАРИФНЫЙ ПЛАН
       </p>
-      <div className="flex">
+      <div className="flex mt-[2%]">
         <aside className="w-[45%]">
           <div className="w-[65%] ml-[25%] mt-[10%]">
             <img className="w-[100%] h-[100%]" src="./img.png" alt="img"></img>
