@@ -16,7 +16,7 @@ export default function Main() {
         </aside>
         <article className="w-[40%] ml-[3%]">
           <Price />
-          <p className="m-[0.5%] mt-[3%] text-[125%] font-all font-bold ">
+          <p className="m-[0.5%] mt-[3%] text-[110%] font-all font-bold ">
             Следуя плану на 3 месяца, люди получают в 2 раза лучший результат,
             чем за 1 месяц
           </p>

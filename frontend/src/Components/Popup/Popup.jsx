@@ -6,7 +6,7 @@ export default function Popup() {
   return (
     <>
       <div className=" z-1 fixed w-[100%] h-[100%]  bg-black/50 overflow-auto top-0 left-0">
-        <div className="z-2 absolute w-[54%] h-[80%] mx-[23%] my-[10%] mt-[8%] bg-[#F5F7F7]">
+        <div className="z-2 absolute w-[54%] mx-[23%] my-[10%] mt-[3%] bg-[#F5F7F7]">
           <p className="w-[27%] ml-[5%] p-[0.5%] pl-[1.5%] bg-[#01B9C5] text-white font-all font-bold text-[110%]">
             горящее предложение
           </p>
