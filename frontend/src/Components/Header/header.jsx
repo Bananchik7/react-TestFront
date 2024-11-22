@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from "react";
 
 export default function Header() {
-  const [seconds, setSeconds] = useState(11);
-  const [minutes, setMinutes] = useState(2);
+  const [seconds, setSeconds] = useState(5);
+  const [minutes, setMinutes] = useState(0);
+  const [color, setColor] = useState("#FD4D35");
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (seconds > 10) {
+      if (seconds > 10 && minutes >= 0) {
         setSeconds(seconds - 1);
-      } else if (seconds <= 10 && seconds > 0) {
+      } else if (seconds <= 10 && seconds > 1 && minutes > -1) {
         setSeconds("0" + (seconds - 1));
-      } else if (seconds <= 0) {
+      } else if (seconds <= 0 && minutes > 0) {
         setSeconds(59);
         setMinutes(minutes - 1);
+      } else if (minutes <= 0 && seconds <= 1) {
+        setSeconds("0" + (seconds - 1));
+        setSeconds("0" + 0);
+        setMinutes(0);
+        setColor("#01B9C5");
       }
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [minutes, seconds]);
+  }, [color, minutes, seconds]);
 
   return (
     <header className="z-0 flex bg-[#FFFFFF] h-[10%]">
@@ -25,7 +31,10 @@ export default function Header() {
         Скидка действует:
       </div>
       <div>
-        <div className="flex ml-[25%] mt-[3%] text-[#FD4D35] text-[280%] font-time font-bold">
+        <div
+          style={{ color: color }}
+          className="flex ml-[25%] mt-[3%] text-[280%]  font-time font-bold"
+        >
           <p>0{minutes}</p>
           <p className="ml-[10%]">:</p>
           <p className="ml-[10%]">{seconds}</p>
