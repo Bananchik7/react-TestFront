@@ -5,7 +5,7 @@ import { list } from "../../Database/test-list.js";
 
 export default function Popup() {
   const [visible, setVisible] = useState("none");
-  const [time, setTime] = useState(1000);
+  const [time, setTime] = useState(90);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -51,17 +51,17 @@ export default function Popup() {
           <p className="ml-[7%] mt-[5%] font-all font-bold text-[135%]">
             Посмотри, что мы для тебя приготовили 🔥
           </p>
-          <div className="flex ml-[3%]">
+          <div className="flex mx-[3%]">
             <CheckPopup {...list[8]} old="./old_price.png" sale="./sale.png" />
             <CheckPopup
               {...list[9]}
               old="./old_price-2.png"
-              sale="./sale-2.png"
+              sale="./sale-3.png"
             />
             <CheckPopup
               {...list[10]}
               old="./old_price-3.png"
-              sale="./sale-3.png"
+              sale="./sale-2.png"
             />
           </div>
           <ButtonPopup />
