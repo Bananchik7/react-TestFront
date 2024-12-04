@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { list } from "../../Database/test-list.js";
 import CheckPrice from "./CheckPrice.jsx";
 import CheckPriceFour from "./CheckPriceFour.jsx";
@@ -5,6 +6,8 @@ import CheckPriceSale from "./CheckPriceSale.jsx";
 import CheckPriceSaleFour from "./CheckPriceSaleFour.jsx";
 
 export default function Price({ visibleNew, visibleOld }) {
+  const [clickButton, setClickButton] = useState();
+
   return (
     <>
       <div style={{ display: visibleOld }} className="flex mt-[10%]">
