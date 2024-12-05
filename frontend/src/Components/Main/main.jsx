@@ -6,7 +6,7 @@ import Header from "../Header/Header.jsx";
 
 export default function Main() {
   const [seconds, setSeconds] = useState(10);
-  const [minutes, setMinutes] = useState(1);
+  const [minutes, setMinutes] = useState(0);
   const [visibleOld, setVisibleOld] = useState("none");
   const [visibleNew, setVisibleNew] = useState("flex");
   const [color, setColor] = useState("#FD4D35");

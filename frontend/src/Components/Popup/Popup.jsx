@@ -5,7 +5,17 @@ import { list } from "../../Database/test-list.js";
 
 export default function Popup() {
   const [visible, setVisible] = useState("none");
-  const [time, setTime] = useState(90);
+  const [time, setTime] = useState(1);
+  const [clickButton, setClickButton] = useState(null);
+  const [value, setValue] = useState("");
+
+  function handleClick(type) {
+    setClickButton(type);
+  }
+
+  const changeRadio = (e) => {
+    setValue(e.target.value);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -52,14 +62,33 @@ export default function Popup() {
             Посмотри, что мы для тебя приготовили 🔥
           </p>
           <div className="flex mx-[3%]">
-            <CheckPopup {...list[8]} old="./old_price.png" sale="./sale.png" />
+            <CheckPopup
+              {...list[8]}
+              isActive={clickButton === "oneOld"}
+              onClick={() => handleClick("oneOld")}
+              value="1"
+              checked={value === "1"}
+              onChange={changeRadio}
+              old="./old_price.png"
+              sale="./sale.png"
+            />
             <CheckPopup
               {...list[9]}
+              isActive={clickButton === "twoOld"}
+              onClick={() => handleClick("twoOld")}
+              value="2"
+              checked={value === "2"}
+              onChange={changeRadio}
               old="./old_price-2.png"
               sale="./sale-3.png"
             />
             <CheckPopup
               {...list[10]}
+              isActive={clickButton === "threeOld"}
+              onClick={() => handleClick("threeOld")}
+              value="3"
+              checked={value === "3"}
+              onChange={changeRadio}
               old="./old_price-3.png"
               sale="./sale-2.png"
             />

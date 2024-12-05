@@ -1,11 +1,32 @@
-export default function CheckPopup({ name, price, old, sale }) {
+export default function CheckPopup({
+  name,
+  price,
+  old,
+  sale,
+  isActive,
+  onClick,
+  onChange,
+  checked,
+}) {
   return (
-    <button className=" w-[40%] bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mx-[1%] mt-[2%] p-[3%] pb-[1%] hover:bg-[#01B9C5]/10  hover:border-[#01B9C5] cursor-pointer">
+    <button
+      className={
+        isActive
+          ? "w-[40%] border rounded-2xl mx-[1%] mt-[2%] p-[3%] pb-[1%] bg-[#01B9C5]/10 border-[#01B9C5]"
+          : "w-[40%] bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mx-[1%] mt-[2%] p-[3%] pb-[1%] hover:bg-[#01B9C5]/10  hover:border-[#01B9C5] cursor-pointer"
+      }
+      onClick={onClick}
+    >
       <div className="flex">
         <p className="text-[#2D3242] text-[170%] font-name font-bold">{name}</p>
         <input
-          className="w-[12%] ml-[42%] mt-[-7%] accent-[#37E3EE] cursor-pointer"
+          className={
+            checked
+              ? "w-[12%] ml-[42%] mt-[-7%] accent-[#37E3EE]"
+              : "w-[12%] ml-[42%] mt-[-7%]  cursor-pointer"
+          }
           type="radio"
+          onChange={onChange}
         ></input>
       </div>
       <div className="w-[30%]">

@@ -1,7 +1,22 @@
-export default function CheckPriceSale({ name, price, text, old, img }) {
+export default function CheckPriceSale({
+  name,
+  price,
+  text,
+  old,
+  img,
+  onClick,
+  isActive,
+}) {
   return (
     <>
-      <button className="w-[45%] bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mr-[2%] p-[3.5%] pl-[4%] pt-[6%] pr-[5%] hover:bg-[#01B9C5]/10  hover:border-[#01B9C5] cursor-pointer">
+      <button
+        className={
+          isActive
+            ? "w-[45%] border rounded-2xl mr-[2%] p-[3.5%] pl-[4%] pt-[6%] pr-[5%] bg-[#01B9C5]/10 border-[#01B9C5]"
+            : "w-[45%] bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mr-[2%] p-[3.5%] pl-[4%] pt-[6%] pr-[5%] hover:bg-[#01B9C5]/10  hover:border-[#01B9C5] cursor-pointer"
+        }
+        onClick={onClick}
+      >
         <img className="w-[50%] ml-[70%] mt-[-50%]" src={img} alt="" />
         <p className="ml-[-20%] text-[#687078] text-[190%] font-name font-bold">
           {name}

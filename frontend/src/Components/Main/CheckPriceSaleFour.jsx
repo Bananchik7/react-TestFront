@@ -1,10 +1,25 @@
-export default function CheckPriceSaleFour({ name, price, text, old, img }) {
+export default function CheckPriceSaleFour({
+  name,
+  price,
+  text,
+  old,
+  img,
+  isActive,
+  onClick,
+}) {
   function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   }
   return (
     <>
-      <div className="flex bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mr-[0.8%] mt-[7%] hover:bg-[#01B9C5]/10  hover:border-[#01B9C5] cursor-pointer">
+      <div
+        className={
+          isActive
+            ? "flex border rounded-2xl mr-[0.8%] mt-[7%] bg-[#01B9C5]/10 border-[#01B9C5]"
+            : "flex bg-[#FFFFFF] border border-[#D3D6DD] rounded-2xl mr-[0.8%] mt-[7%] hover:bg-[#01B9C5]/10  hover:border-[#01B9C5] cursor-pointer"
+        }
+        onClick={onClick}
+      >
         <p className="text-[190%] font-name font-bold m-[6%] mt-[5%] mr-[3%]">
           {name}
         </p>
