@@ -7,15 +7,13 @@ export default function Popup() {
   const [visible, setVisible] = useState("none");
   const [time, setTime] = useState(1);
   const [clickButton, setClickButton] = useState(null);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(null);
 
   function handleClick(type) {
     setClickButton(type);
+    setValue(type);
+    console.log(value);
   }
-
-  const changeRadio = (e) => {
-    setValue(e.target.value);
-  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -64,31 +62,25 @@ export default function Popup() {
           <div className="flex mx-[3%]">
             <CheckPopup
               {...list[8]}
-              isActive={clickButton === "oneOld"}
-              onClick={() => handleClick("oneOld")}
-              value="1"
-              checked={value === "1"}
-              onChange={changeRadio}
+              isActive={clickButton === "oneOld" && value === "oneOld"}
+              onClick={(event) => handleClick("oneOld")}
+              defaultChecked={value === "oneOld" ? true : false}
               old="./old_price.png"
               sale="./sale.png"
             />
             <CheckPopup
               {...list[9]}
-              isActive={clickButton === "twoOld"}
+              isActive={clickButton === "twoOld" && value === "twoOld"}
               onClick={() => handleClick("twoOld")}
-              value="2"
-              checked={value === "2"}
-              onChange={changeRadio}
+              defaultChecked={value === "twoOld" ? true : false}
               old="./old_price-2.png"
               sale="./sale-3.png"
             />
             <CheckPopup
               {...list[10]}
-              isActive={clickButton === "threeOld"}
+              isActive={clickButton === "threeOld" && value === "threeOld"}
               onClick={() => handleClick("threeOld")}
-              value="3"
-              checked={value === "3"}
-              onChange={changeRadio}
+              checked={value === "threeOld" ? true : false}
               old="./old_price-3.png"
               sale="./sale-2.png"
             />

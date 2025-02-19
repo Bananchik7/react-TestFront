@@ -5,11 +5,11 @@ import ButtonSale from "./ButtonSale.jsx";
 import Header from "../Header/Header.jsx";
 
 export default function Main() {
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(40);
   const [minutes, setMinutes] = useState(0);
   const [visibleOld, setVisibleOld] = useState("none");
   const [visibleNew, setVisibleNew] = useState("flex");
-  const [color, setColor] = useState("#FD4D35");
+  const [color, setColor] = useState("#01B9C5");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,13 +20,17 @@ export default function Main() {
       } else if (seconds <= 0 && minutes > 0) {
         setSeconds(59);
         setMinutes(minutes - 1);
-      } else if (minutes <= 0 && seconds <= 1) {
+      } else if (minutes > -1 && seconds <= 1) {
         setSeconds("0" + (seconds - 1));
         setSeconds("0" + 0);
         setMinutes(0);
-        setColor("#01B9C5");
+        setColor("#FD4D35");
         setVisibleOld("flex");
         setVisibleNew("none");
+        clearInterval(timer);
+      }
+      if (minutes > -1 && seconds <= 30) {
+        setColor("#FD4D35");
       }
     }, 1000);
 

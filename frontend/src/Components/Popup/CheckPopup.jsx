@@ -20,13 +20,10 @@ export default function CheckPopup({
       <div className="flex">
         <p className="text-[#2D3242] text-[170%] font-name font-bold">{name}</p>
         <input
-          className={
-            checked
-              ? "w-[12%] ml-[42%] mt-[-7%] accent-[#37E3EE]"
-              : "w-[12%] ml-[42%] mt-[-7%]  cursor-pointer"
-          }
+          className={"w-[12%] ml-[42%] mt-[-7%]  cursor-pointer"}
           type="radio"
-          onChange={onChange}
+          name="popup"
+          checked={checked}
         ></input>
       </div>
       <div className="w-[30%]">
